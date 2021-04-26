@@ -1,0 +1,3 @@
+docker build -t shakespoke .
+docker run -t -d --name pokeshake shakespoke
+docker container exec -it pokeshake java Shakespokev2 charizard
