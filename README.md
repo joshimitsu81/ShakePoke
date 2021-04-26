@@ -7,6 +7,7 @@ This package includes two main versions, and a test runner.
 ## Installation
  - Extract the .class files and test_poke.json file to a working directory.
  - Add the external library to your java runtime classpath: gson-2.8.6.jar.
+ - If using the class files, the Building step below is not needed.
 
 ## Building
  - Use OpenJDK 14 or newer.
