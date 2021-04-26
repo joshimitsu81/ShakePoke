@@ -10,7 +10,7 @@ This package includes two main versions, and a test runner.
  - If using the class files, the Building step below is not needed.
 
 ## Building
- - Use OpenJDK 14 or newer.
+ - **Prerequisite:** *Use OpenJDK 14 or newer.*
  - Add the external library to your java build classpath: gson-2.8.6.jar.
  - Compile the java source files in order:
   - Shakespokev2.java
@@ -18,7 +18,7 @@ This package includes two main versions, and a test runner.
   - Shakespokev3.java
 
 ## Running
- - Use OpenJDK JRE 14 or newer.
+ - **Prerequisite:** *Use OpenJDK JRE 14 or newer.*
  - Ensure the JRE PATH is correctly set up.
  - Navigate to the working directory.
   - To run Shakespokev2:
