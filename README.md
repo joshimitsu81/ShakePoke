@@ -63,6 +63,21 @@ This package includes two main versions, and a test runner.
     `java Shakespokev2Test`
   - The output will be written to test_output.txt in the working directory.
   
+## Docker
+ - A Dockerfile is available to create a ready to run image.
+ - This process does not require the "Installation" and "Building" tasks.
+ - **Prerequisite:** *Have a Docker host ready to use.*
+ - **Prerequisite:** *Pull the openjdk image to the host.*
+ - Extract the file shakespoke_docker.zip to the Docker working directory.
+ - The current working directory should show a folder named shakespoke_docker (containing the class files) and the Dockerfile.
+ - Use the suggested commands to build the image, start and run the container:
+  - Build the image
+  `docker build -t shakespoke .`
+  - Start the container
+  `docker run -t -d --name pokeshake shakespoke`
+  - Run commands on the container as per the section "Running" above. Example:
+  `docker container exec -it pokeshake java Shakespokev2 charizard`
+  
 ## Fair Use
 The PokeAPI resource declares a fair use policy: Free access is intended for personal and development use.
 It is not recommended to make multiple requests of large datasets.
