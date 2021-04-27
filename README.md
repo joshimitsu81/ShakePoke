@@ -20,9 +20,12 @@ This package includes two main versions, and a test runner.
 ## Running
  - **Prerequisite:** *Use OpenJDK JRE 14 or newer.*
  - Ensure the JRE PATH is correctly set up.
+ - Ensure the library gson-2.8.6.jar is included in the Java runtime classpath.
  - Navigate to the working directory.
   - To run Shakespokev2:
     `java Shakespokev2 <pokemon_name> <version_name> <language_name>`
+  - Alternative example with explicit classpath:
+  - `java -cp .:<path_to_gson-2.8.6.jar> Shakespokev3` (applies to running Shakespokev2, Shakespokev2Test, Shakespokev3
   - Example:
     `java Shakespokev2 charizard ruby shake`
     `java Shakespokev2 ditto silver en`
