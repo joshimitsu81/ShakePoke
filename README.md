@@ -6,12 +6,12 @@ This package includes two main versions, and a test runner.
 
 ## Installation
  - Extract the .class files and test_poke.json file to a working directory.
- - Add the external library to your java runtime classpath: gson-2.8.6.jar.
- - If using the class files, the Building step below is not needed.
+ - Add the external library to your java runtime CLASSPATH: gson-2.8.6.jar.
+ - If using the .class files, the Building step below is not needed.
 
 ## Building
  - **Prerequisite:** *Use OpenJDK 14 or newer.*
- - Add the external library to your java build classpath: gson-2.8.6.jar.
+ - Add the external library to your java build CLASSPATH: gson-2.8.6.jar.
  - Compile the java source files in order:
   - Shakespokev2.java
   - Shakespokev2Test.java
@@ -20,7 +20,7 @@ This package includes two main versions, and a test runner.
 ## Running
  - **Prerequisite:** *Use OpenJDK JRE 14 or newer.*
  - Ensure the JRE PATH is correctly set up.
- - Ensure the library gson-2.8.6.jar is included in the Java runtime classpath.
+ - Ensure the library gson-2.8.6.jar is included in the Java runtime CLASSPATH.
  - Navigate to the working directory.
   - To run Shakespokev2:
     `java Shakespokev2 <pokemon_name> <version_name> <language_name>`
