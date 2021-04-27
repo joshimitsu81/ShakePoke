@@ -1,0 +1,25 @@
+{
+  "tests": [
+	{
+	  "name": "wartortle",
+	  "version": "sapphire",
+	  "language": "en"
+    },
+    {
+	  "name": "blastoise",
+	  "version": "silver",
+	  "language": "en"
+	},
+	{
+	  "name": "pidgeot",
+	  "version": "emerald",
+	  "language": "en"
+	},
+	{
+	  "name": "ditto"
+	},
+	{
+	  "name": ""
+	}
+  ]
+}
