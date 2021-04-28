@@ -1,8 +1,9 @@
 # Shakespoke
-This package includes two main versions, and a test runner.
+This package includes three main versions, and a test runner.
  - Shakespokev2 is run by supplying command line arguments at runtime.
  - Shakespokev3 is run with no arguments, and provides step by step prompts to read in the parameters.
  - Shakespokev2Test is run with no arguments, and takes in a batch of parameters from a JSON file.
+ - Shakespokehttp starts an HTTP listener on port 5000, and accepts GET requests of the form http://<host>/pokemon/<pokemon_name>.
 
 ## Installation
  - Extract the .class files and test_poke.json file to a working directory.
@@ -16,6 +17,7 @@ This package includes two main versions, and a test runner.
   - Shakespokev2.java
   - Shakespokev2Test.java
   - Shakespokev3.java
+  - Shakespokehttp.java
 
 ## Running
  - **Prerequisite:** *Use OpenJDK JRE 14 or newer.*
@@ -29,6 +31,9 @@ This package includes two main versions, and a test runner.
   - Example:
     `java Shakespokev2 charizard ruby shake`
     `java Shakespokev2 ditto silver en`
+  - To run Shakespokehttp:
+    `java Shakespokehttp`
+   - Use a web browser or command line tool to send a GET request to http://localhost/pokemon/<pokemon_name>
   - To run Shakespokev3:
     `java Shakespokev3`
   - Any arguments will be ignored.
@@ -79,8 +84,17 @@ This package includes two main versions, and a test runner.
   `docker build -t shakespoke .`
   - Start the container
   `docker run -t -d --name pokeshake shakespoke`
+  `docker container start pokeshake`
   - Run commands on the container as per the section "Running" above. Example:
   `docker container exec -it pokeshake java Shakespokev2 charizard`
+  - To run Shakespokehttp:
+  `docker container exec -it pokeshake java Shakespokehttp`
+   - Open another command line
+   - On the new command line:
+  `docker container exec -it pokeshake curl http://localhost:5000/pokemon/charizard`
+ - Alternative with port mapping:
+ `docker run -t -d -p 5000:5050 --name pokeshakehttp shakespoke`
+ - Now use the command line or web browser to access http://localhost:5050/pokemon/charizard
   
 ## Fair Use
 The PokeAPI resource declares a fair use policy: Free access is intended for personal and development use.
