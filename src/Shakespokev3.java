@@ -197,6 +197,7 @@ public class Shakespokev3 {
    
    
    private static String findPokeSpeciesUrl(String name_in) {
+      //System.out.println(name_in.split("/")[2]);
       String pokemon_url = "https://pokeapi.co/api/v2/pokemon/";
       String pokespeciesurl = "Not Found";
 
