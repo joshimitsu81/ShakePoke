@@ -1,7 +1,7 @@
 /**
 * Shakespokehttp
-* This program opens a basic HTTP listener on port 5000
-* It takes a GET request of the form http://host:5000/pokemone/<pokemon_name>
+* This program opens a basic HTTP listener on the given port
+* It takes a GET request of the form http://<host_name>:<port_number>/pokemon/<pokemon_name>
 * It then returns the description of the Pokemon to the http client
 * in JSON format, with Shakespearean translation.
 * 
