@@ -3,7 +3,7 @@ This package includes three main versions, and a test runner.
  - Shakespokev2 is run by supplying command line arguments at runtime.
  - Shakespokev3 is run with no arguments, and provides step by step prompts to read in the parameters.
  - Shakespokev2Test is run with no arguments, and takes in a batch of parameters from a JSON file.
- - Shakespokehttp starts an HTTP listener on a given port, and accepts GET requests of the form http://<host_name>:<port>/pokemon/<pokemon_name>?lang=<lang>.
+ - Shakespokehttp starts an HTTP listener on a given port, and accepts GET requests of the form http://<host_name>:<port>/pokemon/<pokemon_name>?lang=<lang_name>.
 
 ## Installation
  1. Extract the .class files and test_poke.json file to a working directory.
