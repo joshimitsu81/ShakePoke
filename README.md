@@ -3,7 +3,7 @@ This package includes three main versions, and a test runner.
  - Shakespokev2 is run by supplying command line arguments at runtime.
  - Shakespokev3 is run with no arguments, and provides step by step prompts to read in the parameters.
  - Shakespokev2Test is run with no arguments, and takes in a batch of parameters from a JSON file.
- - Shakespokehttp starts an HTTP listener on port 5000, and accepts GET requests of the form http://<host>/pokemon/<pokemon_name>.
+ - Shakespokehttp starts an HTTP listener on a given port, and accepts GET requests of the form http://<host>:<port>/pokemon/<pokemon_name>?lang=<lang>.
 
 ## Installation
  1. Extract the .class files and test_poke.json file to a working directory.
@@ -32,8 +32,12 @@ This package includes three main versions, and a test runner.
     `java Shakespokev2 charizard ruby shake`
     `java Shakespokev2 ditto silver en`
   - To run Shakespokehttp:
-    `java Shakespokehttp`
-   - Use a web browser or command line tool to send a GET request to http://localhost/pokemon/<pokemon_name>
+    `java Shakespokehttp <port>`
+  - Example:
+    `java Shakespokehttp 5050`
+   - Use a web browser or command line tool to send a GET request to http://<host>:<port>/pokemon/<pokemon_name>
+   - Example: 
+    `http://<host>:5050/pokemon/ditto?lang=en`
   - To run Shakespokev3:
     `java Shakespokev3`
   - Any arguments will be ignored.
@@ -88,13 +92,13 @@ This package includes three main versions, and a test runner.
   8. Run commands on the container as per the section "Running" above. Example:
   `docker container exec -it pokeshake java Shakespokev2 charizard`
   - To run Shakespokehttp:
-  1. `docker container exec -it pokeshake java Shakespokehttp`
+  1. `docker container exec -it pokeshake java Shakespokehttp 5050`
   2. Open another command line
   3. On the new command line:
-  `docker container exec -it pokeshake curl http://localhost:5000/pokemon/charizard`
- - Alternative with port mapping:
- 1. `docker run -t -d -p 5000:5050 --name pokeshakehttp shakespoke`
- 2. Now use the command line or web browser to access http://localhost:5050/pokemon/charizard
+  `docker container exec -it pokeshake curl http://localhost:5050/pokemon/charizard?lang=en`
+  - Alternative with port mapping:
+  `docker run -t -d -p 5050:6060 --name pokeshakehttp shakespoke`
+  - Now use the command line or web browser to access http://localhost:6060/pokemon/charizard?lang=en
   
 ## Fair Use
 The PokeAPI resource declares a fair use policy: Free access is intended for personal and development use.
